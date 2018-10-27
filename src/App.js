@@ -15,10 +15,28 @@ export default class App extends Component {
         }
     }
 
+    componentWillMount() {
+        const currentCards = this.state.cards;
+
+        this.setState({
+            cards: currentCards,
+            currentCard: this.getRandomCard(currentCards)
+        })
+    }
+
+    getRandomCard(currentCards) {
+        var card = currentCards[Math.floor(Math.random() * currentCards.length)]
+        return(card);
+    }
+
     render() {
         return (
             <div className="App">
-                <Card/>
+                <Card
+                    eng={this.state.currentCard.eng}
+                    han={this.state.currentCard.han}
+                    pin={this.state.currentCard.pin}
+                />
             </div>
         )
     }
