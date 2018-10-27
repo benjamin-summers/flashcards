@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card/Card';
+import DrawButton from './DrawButton/DrawButton';
 
 export default class App extends Component {
     constructor(props) {
@@ -13,6 +14,8 @@ export default class App extends Component {
             ],
             currentCard: {}
         }
+
+        this.updateCard = this.updateCard.bind(this);
     }
 
     componentWillMount() {
@@ -29,6 +32,10 @@ export default class App extends Component {
         return(card);
     }
 
+    updateCard() {
+        console.log("New Card");
+    }
+
     render() {
         return (
             <div className="App">
@@ -37,6 +44,9 @@ export default class App extends Component {
                     han={this.state.currentCard.han}
                     pin={this.state.currentCard.pin}
                 />
+                <div className="buttonRow">
+                    <DrawButton drawCard={this.updateCard}/>
+                </div>
             </div>
         )
     }
