@@ -44,7 +44,10 @@ export default class App extends Component {
     }
 
     updateCard() {
-        console.log("New Card");
+        const currentCards = this.state.cards;
+        this.setState({
+            currentCard: this.getRandomCard(currentCards)
+        });
     }
 
     render() {
