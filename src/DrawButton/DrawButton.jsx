@@ -8,6 +8,10 @@ export default class DrawButton extends Component {
         this.drawCard = this.drawCard.bind(this);
     }
 
+    drawCard() {
+        this.props.drawCard();
+    }
+
     render(props) {
         return (
             <div className="buttonContainer">

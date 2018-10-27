@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './Card/Card';
 import DrawButton from './DrawButton/DrawButton';
+import { DB_CONFIG } from "./config/Firebase/db_config";
 
 export default class App extends Component {
     constructor(props) {
@@ -11,6 +12,10 @@ export default class App extends Component {
             cards: [
                 {id: 1, eng: "English", han: "Hanzi", pin: "Pinyin"},
                 {id: 2, eng: "English", han: "Hanzi_2", pin: "Pinyin_2"},
+                {id: 3, eng: "English", han: "Hanzi_3", pin: "Pinyin_3"},
+                {id: 4, eng: "English", han: "Hanzi_4", pin: "Pinyin_4"},
+                {id: 5, eng: "English", han: "Hanzi_5", pin: "Pinyin_5"},
+                {id: 6, eng: "English", han: "Hanzi_6", pin: "Pinyin_6"}
             ],
             currentCard: {}
         }
